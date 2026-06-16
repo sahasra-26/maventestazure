@@ -11,16 +11,16 @@ vmImage: ubuntu-latest
 steps:
 - task: Maven@3
 inputs:
-mavenPomFile: &#39;artifact1/pom.xml&#39;
-mavenOptions: &#39;-Xmx3072m&#39;
-javaHomeOption: &#39;JDKVersion&#39;
-jdkVersionOption: &#39;17&#39;
-jdkArchitectureOption: &#39;x64&#39;
+mavenPomFile: 'artifact1/pom.xml'
+mavenOptions: '-Xmx3072m'
+javaHomeOption: 'JDKVersion'
+jdkVersionOption: '17'
+jdkArchitectureOption: 'x64'
 publishJUnitResults: true
-testResultsFiles: &#39;**/surefire-reports/TEST-*.xml&#39;
-goals: &#39;clean package&#39;
+testResultsFiles:'**/surefire-reports/TEST-*.xml'
+goals:'clean package'
 - task: PublishBuildArtifacts@1
 inputs:
-PathtoPublish: &#39;artifact1/target&#39;
-ArtifactName: &#39;drop&#39;
-publishLocation: &#39;Container&#39;
+PathtoPublish:'artifact1/target'
+ArtifactName: 'drop'
+publishLocation: 'Container'
